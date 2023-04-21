@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora factorial</title>
+  </head>
+  <body>
+
+    <h1>Calculadora factorial</h1>
+    <label for="numero">Coloca un número entero:</label>
+    <input type="number" id="numero">
+    <button onclick="calcularFactorial()">Calcular</button>
+    <p id="result"></p>
+
+    <script>
+      function calcularFactorial() {
+        const numero = document.getElementById("numero").value;
+        if (numero < 0) {
+          alert("Por favor, ingrese un número positivo");
+        } else {
+        let factorial = 1;
+        for (let i = 1; i <= numero; i++) {
+          factorial *= i;
+        }
+        document.getElementById("result").innerHTML = `El factorial de ${numero} es ${factorial}`;
+      }
+    }
+    </script>
+
+  </body>
+</html>
